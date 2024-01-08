@@ -1,4 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<ClassAgendaDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ClassAgendaDbContext") ?? throw new InvalidOperationException("Connection string 'ClassAgendaDbContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
