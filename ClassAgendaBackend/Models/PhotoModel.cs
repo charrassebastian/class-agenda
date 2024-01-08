@@ -7,5 +7,5 @@ public class PhotoModel {
     public Guid Id { get; set; }
     public required string Name { get; set; }
     public required byte[] Image { get; set; }
-    public required MaterialModel Material { get; set; }
+    public MaterialModel? Material { get; set; }
 }

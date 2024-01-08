@@ -8,8 +8,8 @@ public class MaterialModel {
     public required string Type { get; set; }
     public required string Name { get; set; }
     public DateTime Due { get; set; }
-    public required CourseModel Course { get; set; }
-    public required StudentModel Student { get; set; }
+    public CourseModel? Course { get; set; }
+    public StudentModel? Student { get; set; }
     public required string Teacher { get; set; }
     public List<AnnotationModel> Annotations { get; } = new();
     public List<PhotoModel> Photos { get; } = new();
