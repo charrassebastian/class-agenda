@@ -11,4 +11,6 @@ public class MaterialModel {
     public required CourseModel Course { get; set; }
     public required StudentModel Student { get; set; }
     public required string Teacher { get; set; }
+    public List<AnnotationModel> Annotations { get; } = new();
+    public List<PhotoModel> Photos { get; } = new();
 }
