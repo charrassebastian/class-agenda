@@ -1,8 +1,21 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
+
+dotenv.net.DotEnv.Load();
+
+var dbServer = Environment.GetEnvironmentVariable("DB_SERVER");
+var dbUser = Environment.GetEnvironmentVariable("DB_USER");
+var dbPassword = Environment.GetEnvironmentVariable("DB_PASSWORD");
+var dbName = Environment.GetEnvironmentVariable("DB_NAME");
+
+var connectionString = $"Server={dbServer};Database={dbName};User Id={dbUser};Password={dbPassword};Trusted_Connection=false;MultipleActiveResultSets=true;Trust Server Certificate=true";
+
+// builder.Services.AddDbContext<ClassAgendaDbContext>(options =>
+    // options.UseSqlServer(builder.Configuration.GetConnectionString("ClassAgendaDbContext") ?? throw new InvalidOperationException("Connection string 'ClassAgendaDbContext' not found.")));
+
 builder.Services.AddDbContext<ClassAgendaDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ClassAgendaDbContext") ?? throw new InvalidOperationException("Connection string 'ClassAgendaDbContext' not found.")));
+    options.UseSqlServer(connectionString));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

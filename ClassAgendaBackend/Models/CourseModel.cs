@@ -11,5 +11,6 @@ public class CourseModel {
     public required string Level { get; set; }
     public required string School { get; set; }
     public required string EvaluationType { get; set; }
+    public List<StudentModel> Students { get; } = new();
 
 }
