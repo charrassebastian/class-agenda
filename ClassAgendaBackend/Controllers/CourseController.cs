@@ -13,9 +13,9 @@ namespace ClassAgendaBackend.Controllers
     [ApiController]
     public class CourseController : ControllerBase
     {
-        private readonly ClassAgendaDbContext _context;
+        private readonly CourseAgendaDbContext _context;
 
-        public CourseController(ClassAgendaDbContext context)
+        public CourseController(CourseAgendaDbContext context)
         {
             _context = context;
         }

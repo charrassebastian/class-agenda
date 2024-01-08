@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<CourseAgendaDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CourseAgendaDbContext") ?? throw new InvalidOperationException("Connection string 'CourseAgendaDbContext' not found.")));
 
 dotenv.net.DotEnv.Load();
 
