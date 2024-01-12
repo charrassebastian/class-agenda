@@ -1,7 +1,7 @@
 import type Student from './types/Student'
 
 const student: Student = {
-  name: 'Sebastian',
+  name: 'Sebastian Charras',
   phone: '+54 9 11 1234-5678',
   preferredPlatform: 'Zoom',
   other: '',

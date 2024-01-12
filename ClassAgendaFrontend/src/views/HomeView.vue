@@ -3,6 +3,17 @@ import StudentDashboard from './StudentDashboard.vue'
 import student from '../exampleStudent'
 </script>
 <template>
-  <StudentDashboard :student="student" />
+  <div class="home-view">
+    <StudentDashboard :student="student" />
+  </div>
 </template>
-<style scoped></style>
+<style scoped>
+.home-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin: 0;
+}
+</style>
