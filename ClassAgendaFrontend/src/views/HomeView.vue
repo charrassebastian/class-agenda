@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import StudentDashboard from './StudentDashboard.vue'
-import StudentDTO from '../types/StudentDTO'
-const student: StudentDTO = {
+import type Student from '../types/Student'
+const student: Student = {
   name: "Sebastian",
   phone: "+54 9 11 1234-5678",
   preferredPlatform: "Zoom",
@@ -12,4 +12,4 @@ const student: StudentDTO = {
   <StudentDashboard :student="student"/>
 </template>
 <style scoped>
-</style>
+</style>../types/Student

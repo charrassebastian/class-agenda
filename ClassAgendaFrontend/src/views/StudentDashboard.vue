@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type StudentDTO from '../types/StudentDTO'
+import type Student from '../types/Student'
 import type { PropType } from 'vue'
     defineProps({
         student: {
-            type: Object as PropType<StudentDTO>,
+            type: Object as PropType<Student>,
             required: true
         }
     })
@@ -16,4 +16,4 @@ import type { PropType } from 'vue'
     <p>Otro: {{ student.other }}</p>
 </template>
 <style scroped>
-</style>
+</style>../types/Student
