@@ -3,7 +3,6 @@ import StudentDashboard from './StudentDashboard.vue'
 import student from '../exampleStudent'
 </script>
 <template>
-  <StudentDashboard :student="student"/>
+  <StudentDashboard :student="student" />
 </template>
-<style scoped>
-</style>
+<style scoped></style>

@@ -1,6 +1,6 @@
-import type Material from "./Material";
+import type Material from './Material'
 
 export default interface Annotation {
-    content: string,
-    material?: Material
+  content: string
+  material?: Material
 }
