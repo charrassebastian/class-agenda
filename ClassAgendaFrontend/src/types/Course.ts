@@ -1,6 +1,6 @@
-import Class from "./Class";
-import Material from "./Material";
-import Student from "./Student";
+import type Class from "./Class";
+import type Material from "./Material";
+import type Student from "./Student";
 
 export default interface Course {
     topic: string,

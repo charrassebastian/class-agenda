@@ -1,6 +1,6 @@
-import { Class } from "estree";
-import Course from "./Course";
-import Material from "./Material";
+import type Class from "./Class";
+import type Course from "./Course";
+import type Material from "./Material";
 
 export default interface Student {
   name: string,

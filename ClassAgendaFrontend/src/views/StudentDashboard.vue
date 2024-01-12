@@ -12,8 +12,8 @@ import type { PropType } from 'vue'
 <template>
     <h1>Nombre: {{ student.name }}</h1>
     <p>Teléfono: {{ student.phone }}</p>
-    <p>Plataforma preferida: {{  student.preferredPlatform }}</p>
+    <p>Plataforma preferida: {{ student.preferredPlatform }}</p>
     <p>Otro: {{ student.other }}</p>
 </template>
-<style scroped>
-</style>../types/Student
+<style scoped>
+</style>

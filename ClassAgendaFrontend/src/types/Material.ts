@@ -1,15 +1,13 @@
-import Annotation from "./Annotation";
-import Course from "./Course";
-import Photo from "./Photo";
-import Student from "./Student";
-
-type NewType = Course;
+import type Annotation from "./Annotation";
+import type Course from "./Course";
+import type Photo from "./Photo";
+import type Student from "./Student";
 
 export default interface Material {
     type: string,
     name: string,
     due: Date,
-    course?: NewType,
+    course?: Course,
     student?: Student,
     teacher: string,
     annotations?: Annotation[],
