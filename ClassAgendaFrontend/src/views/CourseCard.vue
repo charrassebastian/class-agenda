@@ -10,22 +10,16 @@ defineProps({
 })
 </script>
 <template>
-  <div class="course">
-    <v-card>
-      <v-card-title>Asignatura</v-card-title>
-      <v-card-text>
-        <p>Tipo de evaluacion: {{ course.evaluationType }}</p>
-        <p>Nivel: {{ course.level }}</p>
-        <p>Institucion: {{ course.school }}</p>
-        <p>Nombre: {{ course.topic }}</p>
-        <p>Año: {{ course.year }}</p>
-        <p>Estudiantes: {{ course.students }}</p>
-      </v-card-text>
-    </v-card>
-  </div>
+  <v-card class="m-3">
+    <v-card-title>Asignatura</v-card-title>
+    <v-card-text>
+      <p>Tipo de evaluacion: {{ course.evaluationType }}</p>
+      <p>Nivel: {{ course.level }}</p>
+      <p>Institucion: {{ course.school }}</p>
+      <p>Nombre: {{ course.topic }}</p>
+      <p>Año: {{ course.year }}</p>
+      <p>Estudiantes: {{ course.students }}</p>
+    </v-card-text>
+  </v-card>
 </template>
-<style scoped>
-.course {
-  margin: 2em;
-}
-</style>
+<style scoped></style>

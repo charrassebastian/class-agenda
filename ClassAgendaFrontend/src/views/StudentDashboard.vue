@@ -5,6 +5,7 @@ import CourseCard from './CourseCard.vue'
 import ClassCard from './ClassCard.vue'
 import MaterialCard from './MaterialCard.vue'
 import { VCard } from 'vuetify/components'
+import StudentCard from './StudentCard.vue'
 defineProps({
   student: {
     type: Object as PropType<Student>,
@@ -13,42 +14,53 @@ defineProps({
 })
 </script>
 <template>
-  <div class="student-dashboard">
-    <h1 class="text-5xl m-5 text-white">{{ student.name }}</h1>
-    <v-card>
-      <v-card-item>
-        <v-card-text>
-          <p>Telefono: {{ student.phone }}</p>
-          <p>Plataforma preferida: {{ student.preferredPlatform }}</p>
-          <p>Otro: {{ student.other }}</p>
-        </v-card-text>
-      </v-card-item>
-    </v-card>
+  <div class="h-screen w-screen flex flex-col">
+    <div class="m-5 flex justify-center">
+      <v-card class="w-fit">
+        <v-card-title>
+          <h1 class="text-3xl">{{ student.name }}</h1>
+        </v-card-title>
+      </v-card>
+    </div>
+    <StudentCard :student="student" />
     <div>
-      <CourseCard
-        :key="JSON.stringify(course)"
-        v-for="course in student.courses"
-        :course="course"
-      />
+      <v-card class="m-5 w-fit">
+        <v-card-title>
+          <h2 class="text-2xl">Asignaturas</h2>
+        </v-card-title>
+      </v-card>
+      <div class="flex flex-row">
+        <CourseCard
+          :key="JSON.stringify(course)"
+          v-for="course in student.courses"
+          :course="course"
+        />
+      </div>
     </div>
     <div>
-      <ClassCard :key="JSON.stringify(c)" v-for="c in student.classes" :data="c" />
+      <v-card class="m-5 w-fit">
+        <v-card-title>
+          <h2 class="text-2xl">Clases</h2>
+        </v-card-title>
+      </v-card>
+      <div class="flex flex-row">
+        <ClassCard :key="JSON.stringify(c)" v-for="c in student.classes" :data="c" />
+      </div>
     </div>
     <div>
-      <MaterialCard
-        :key="JSON.stringify(material)"
-        v-for="material in student.materials"
-        :material="material"
-      />
+      <v-card class="m-5 w-fit">
+        <v-card-title>
+          <h2 class="text-2xl">Materiales</h2>
+        </v-card-title>
+      </v-card>
+      <div class="flex flex-row">
+        <MaterialCard
+          :key="JSON.stringify(material)"
+          v-for="material in student.materials"
+          :material="material"
+        />
+      </div>
     </div>
   </div>
 </template>
-<style scoped>
-.student-dashboard {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-</style>
+<style scoped></style>

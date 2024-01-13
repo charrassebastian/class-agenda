@@ -3,17 +3,12 @@ import StudentDashboard from './StudentDashboard.vue'
 import student from '../exampleStudent'
 </script>
 <template>
-  <div class="home-view">
+  <div class="home-view flex justify-center align-center h-screen w-screen bg-[url('assets/background.jpg')] bg-cover bg-center bg-no-repeat">
     <StudentDashboard :student="student" />
   </div>
 </template>
 <style scoped>
 .home-view {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  margin: 0;
+  overflow-y: auto;
 }
 </style>

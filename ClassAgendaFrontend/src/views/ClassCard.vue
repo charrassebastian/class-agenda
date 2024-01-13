@@ -10,19 +10,13 @@ defineProps({
 })
 </script>
 <template>
-  <div class="class">
-    <v-card>
-      <v-card-title>Clase</v-card-title>
-      <v-card-text>
-        <p>Asignatura: {{ data.course }}</p>
-        <p>Inicio: {{ data.start }}</p>
-        <p>Fin: {{ data.end }}</p>
-      </v-card-text>
-    </v-card>
-  </div>
+  <v-card class="m-3">
+    <v-card-title>Clase</v-card-title>
+    <v-card-text>
+      <p>Asignatura: {{ data.course }}</p>
+      <p>Inicio: {{ data.start }}</p>
+      <p>Fin: {{ data.end }}</p>
+    </v-card-text>
+  </v-card>
 </template>
-<style scoped>
-.class {
-  margin: 2em;
-}
-</style>
+<style scoped></style>
